@@ -27,10 +27,19 @@ for (let i = 0; i < cars.length; i++) {
     benzina.push(car);
   } else if(car.fuel === "diesel"){
     diesel.push(car);
-  } 
-  rimanenti.push(car);
+  } else{
+    rimanenti.push(car);
+  }
 }
 
 console.log(benzina);
 console.log(diesel);
 console.log(rimanenti);
+
+// metodo filter
+const autoBenzina = cars.filter((car) => car.fuel === "benzina");
+const autoDiesel = cars.filter((car) => car.fuel === "diesel");
+const autoRimanenti = cars.filter((car) => car.fuel !== "benzina" && car.fuel !== "diesel");
+console.log(autoBenzina);
+console.log(autoDiesel);
+console.log(autoRimanenti);
