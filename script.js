@@ -20,7 +20,6 @@ const diesel = [];
 const rimanenti = [];
 
 // senza metodi
-
 for (let i = 0; i < cars.length; i++) {
   const car = cars[i];
   if(car.fuel === "benzina"){
@@ -35,6 +34,26 @@ for (let i = 0; i < cars.length; i++) {
 console.log(benzina);
 console.log(diesel);
 console.log(rimanenti);
+
+// forEach
+const benz = [];
+const dies = [];
+const rim = [];
+
+cars.forEach((car) => {
+  if(car.fuel === "benzina"){
+    benz.push(car);
+  } else if(car.fuel === "diesel"){
+    dies.push(car);
+  } else{
+    rim.push(car);
+  }
+})
+console.log(benz);
+console.log(dies);
+console.log(rim);
+
+
 
 // metodo filter
 const autoBenzina = cars.filter((car) => car.fuel === "benzina");
